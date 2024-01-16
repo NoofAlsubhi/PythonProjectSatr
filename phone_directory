@@ -1,0 +1,24 @@
+phone_directory ={'1111111111': 'Amal',
+       	          '2222222222': 'Mohammed',
+                  '3333333333': 'Khaled' ,
+                  '4444444444': 'Abdullah',
+                  '5555555555': 'Rawan',
+                  '6666666666': 'Faisal',
+                  '7777777777': 'Layla'}
+
+
+def PhoneNumber():
+    num = input('Enter The Phone Number Please:')
+    name = phone_directory.get(num)
+
+    if num in phone_directory:
+        print('This is', name, 'Phone Number')
+
+    elif len(num) > 10 or len(num) < 10:
+        print('This is invalid number')
+
+    else:
+        print('Sorry, the number is not found ')
+
+
+PhoneNumber()
